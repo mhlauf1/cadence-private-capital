@@ -1,10 +1,9 @@
-import { Button } from "@nextui-org/button";
+import Hero2 from "@/sections/home/Hero2";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-6xl">hello world</h1>
-      <Button>Testing</Button>
+    <main className="relative">
+      <Hero2 />
     </main>
   );
 }
