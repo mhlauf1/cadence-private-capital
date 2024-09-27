@@ -12,8 +12,8 @@ type AnimatedHeroProps = {
 
 const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
   return (
-    <div className="h-[90vh]  min-h-[600px] py-16 text-white w-full relative overflow-hidden">
-      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
+    <section className="h-[90vh]  min-h-[600px] py-12 text-white w-full  overflow-hidden">
+      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/30 -z-10"></div>
       <Image
         src={bgImage}
         alt={title}
@@ -77,7 +77,7 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
         </div>
       </motion.div>
       {/* </AnimatePresence> */}
-    </div>
+    </section>
   );
 };
 
