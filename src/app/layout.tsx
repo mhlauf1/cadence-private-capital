@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>
+      <body className={`overflow-x-hidden ${montserrat.className}`}>
         <NextUIProvider>
           <Nav />
           {children}

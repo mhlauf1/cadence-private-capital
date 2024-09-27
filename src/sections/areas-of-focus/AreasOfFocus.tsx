@@ -24,7 +24,7 @@ const cardData = [
 const Card = ({ text, Icon }: { text: string; Icon: React.ElementType }) => {
   return (
     <AnimatedWrapper animationType="slide-in-left" delay={600}>
-      <div className="bg-[#fefefe] py-12 w-[400px] p-6 rounded-lg flex flex-col gap-8 items-center shadow-md">
+      <div className="bg-[#fefefe] py-12 md:w-[400px] p-6 rounded-lg flex flex-col gap-8 items-center shadow-md">
         <div className="  bg-blue-200 w-[125px] h-[125px] flex items-center justify-center py-8 rounded-full">
           <Icon className="text-6xl" color="#0AA0F2" />
         </div>
@@ -37,7 +37,7 @@ const Card = ({ text, Icon }: { text: string; Icon: React.ElementType }) => {
 
 const AreasOfFocus = () => {
   return (
-    <section className="px-8 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24 lg:pb-28 lg:pt-48">
+    <section className="px-4 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24 lg:pb-28 lg:pt-48">
       <div className="flex flex-col gap-8 items-center">
         <AnimatedWrapper delay={200}>
           <span className="uppercase text-sm tracking-wide text-neutral-500">
