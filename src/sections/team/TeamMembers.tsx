@@ -51,11 +51,11 @@ const TeamMembers = () => {
         </div>
       </div>
       <div className="text-center mt-16">
-        <p className="text-3xl font-semibold">
+        <p className="text-2xl md:text-3xl font-semibold">
           See CPC&apos;s{" "}
           <Link
             href="/advisory-board"
-            className="underline text-3xl text-neutral-500"
+            className="underline text-2xl md:text-3xl text-neutral-500"
           >
             Advisory Board
           </Link>{" "}
