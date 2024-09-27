@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 type AnimatedWrapperProps = {
   children: React.ReactNode;
@@ -7,76 +8,58 @@ type AnimatedWrapperProps = {
   duration?: number;
   className?: string;
   animationType?: "fade-up" | "fade-in" | "slide-in-left" | "slide-in-right";
-  threshold?: number;
 };
 
 const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   children,
   delay = 0,
-  duration = 700,
+  duration = 0.7,
   className = "",
   animationType = "fade-up",
-  threshold = 0.1,
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const controls = useAnimation();
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
+    if (isInView) {
+      controls.start("visible");
+    }
+  }, [isInView, controls]);
+
+  const variants = {
+    hidden: {
+      opacity: 0,
+      y: animationType === "fade-up" ? 20 : 0,
+      x:
+        animationType === "slide-in-left"
+          ? -20
+          : animationType === "slide-in-right"
+          ? 20
+          : 0,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        duration: duration,
+        delay: delay / 1000, // Convert ms to seconds
+        ease: "easeOut",
       },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: threshold,
-      }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, [threshold]);
-
-  const getAnimationClasses = () => {
-    switch (animationType) {
-      case "fade-up":
-        return "translate-y-4";
-      case "fade-in":
-        return "";
-      case "slide-in-left":
-        return "-translate-x-full";
-      case "slide-in-right":
-        return "translate-x-full";
-      default:
-        return "translate-y-4";
-    }
+    },
   };
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`${className} transition-all ease-out`}
-      style={{
-        transitionDuration: `${duration}ms`,
-        transitionDelay: `${delay}ms`,
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translate(0, 0)" : undefined,
-      }}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className={className}
     >
-      <div className={!isVisible ? getAnimationClasses() : undefined}>
-        {children}
-      </div>
-    </div>
+      {children}
+    </motion.div>
   );
 };
 
