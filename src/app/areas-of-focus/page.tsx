@@ -4,7 +4,7 @@ import AreasOfFocus from "@/sections/areas-of-focus/AreasOfFocus";
 
 const AreasOfFocusPage = () => {
   return (
-    <main className="relative">
+    <main>
       <Hero />
       <AreasOfFocus />
     </main>
