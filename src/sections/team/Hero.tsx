@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="h-[65vh] py-16 relative text-white w-full">
       <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/50 -z-10"></div>
       <Image
-        src="/team-bg.jpg"
+        src="/team-bg-min.png"
         alt="Team Page Image"
         fill
         className="-z-20"
