@@ -1,11 +1,16 @@
 import React from "react";
-import Hero from "@/sections/about/Hero";
+import AnimatedHero from "@/components/AnimatedHero";
+
 import AboutUs from "@/sections/about/AboutUs";
 
 const AboutPage = () => {
   return (
-    <main className="relative">
-      <Hero />
+    <main>
+      <AnimatedHero
+        title="About Cadence"
+        bgImage="/minneapolis-1-min.png"
+        description="Cadence Private Capital invests in lower middle market companies on behalf of our anchor investors and other partners"
+      />
       <AboutUs />
     </main>
   );

@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "@/sections/team/Hero";
+import StaticHero from "@/components/StaticHero";
 import TeamMembers from "@/sections/team/TeamMembers";
 
 const TeamPage = () => {
   return (
     <main className="relative">
-      <Hero />
+      <StaticHero bgImage="/team-bg-min.png" title="Meet Cadence" />
       <TeamMembers />
     </main>
   );

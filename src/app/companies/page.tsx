@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "@/sections/companies/Hero";
+import StaticHero from "@/components/StaticHero";
 import Company from "@/sections/companies/Company";
 
 const CompaniesPage = () => {
   return (
     <main>
-      <Hero />
+      <StaticHero bgImage="/companies-bg-min.png" title="Cadence Investments" />
       <Company />
     </main>
   );
