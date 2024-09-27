@@ -12,15 +12,15 @@ type AnimatedHeroProps = {
 
 const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
   return (
-    <div className="h-[90vh] py-16 text-white w-full relative overflow-hidden">
-      {/* <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
+    <div className="h-[90vh]  min-h-[600px] py-16 text-white w-full relative overflow-hidden">
+      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
       <Image
         src={bgImage}
         alt={title}
         fill
-        className="-z-20"
+        className="-z-20 w-screen h-full"
         objectFit="cover"
-      /> */}
+      />
       {/* <AnimatePresence> */}
       <motion.div
         className="h-full w-full px-4 md:px-20 flex flex-col items-center justify-between mt-auto"

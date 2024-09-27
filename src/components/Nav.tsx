@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
   Navbar,
@@ -7,24 +7,11 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
-import useIsDesktop from "@/hooks/useIsDesktop";
 import Link from "next/link";
-import { MdEmail } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [showNav, setShowNav] = useState(false);
-  const isDesktop = useIsDesktop();
-
-  // useEffect(() => {
-  //   // Delay the navbar appearance
-  //   const timer = setTimeout(() => {
-  //     setShowNav(true);
-  //   }, 4500); // Adjust this delay to match your video reveal animation
-
-  //   return () => clearTimeout(timer);
-  // }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -38,16 +25,6 @@ export default function Nav() {
     { name: "Advisory Board", href: "/advisory-board" },
     { name: "Companies", href: "/companies" },
   ];
-
-  // const navVariants = {
-  //   hidden: { y: -100 },
-  //   visible: { y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-  // };
-
-  // const linkVariants = {
-  //   hidden: { opacity: 0, y: -20 },
-  //   visible: { opacity: 1, y: 0 },
-  // };
 
   return (
     <AnimatePresence>
