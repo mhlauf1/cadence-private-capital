@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative">
       <AnimatedHero
         title="Cadence Areas of Focus"
-        bgImage="/minneapolis-2.jpg"
+        bgImage="/minneapolis-2-min.png"
         description="Cadence targets opportunities in growing industries with attractive tailwinds"
       />
     </div>

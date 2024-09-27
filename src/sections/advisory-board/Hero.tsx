@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative">
       <AnimatedHero
         title="CPC Advisory Board"
-        bgImage="/advisory-bg.jpg"
+        bgImage="/advisory-bg-min.png"
         description="CPC's advisors bring a wealth of knowledge and experience to its strategies and investments"
       />
     </div>

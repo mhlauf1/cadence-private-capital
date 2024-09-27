@@ -53,7 +53,7 @@ const AnimatedHero = ({
               objectFit="cover"
             />
           </div>
-          <h2 className="text-4xl md:text-5xl text-center font-semibold">
+          <h2 className="text-4xl md:text-5xl text-center tracking-tight font-semibold">
             {title}
           </h2>
         </div>

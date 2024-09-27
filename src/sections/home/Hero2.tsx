@@ -15,20 +15,20 @@ const Hero2 = () => {
         objectFit="cover"
       />
       <motion.div
-        className="flex py-24 px-8 md:px-20 justify-between h-full flex-col"
+        className="flex py-36 md:py-24 px-4 md:px-20 md:justify-between h-full items-center md:items-start flex-col-reverse md:flex-col"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeInOut", delay: 0.2 }}
       >
-        <div>
-          <h2 className="text-3xl md:text-5xl leading-[120%] font-medium text-white mb-2">
-            Private Equity Partners for
-          </h2>
-          <h2 className="text-3xl md:text-5xl leading-[120%] font-medium text-white">
-            the Lower Middle Market
-          </h2>
+        <div className="mt-[15vh] md:mt-0">
+          <h1
+            style={{ lineHeight: "120%" }}
+            className="text-2xl md:text-4xl lg:text-5xl w-full md:w-[60%] font-medium text-white mb-2"
+          >
+            Private Equity Partners for the Lower Middle Market
+          </h1>
         </div>
-        <div className="h-[300px] w-[250px] md:w-[300px]">
+        <div className="h-[225px] md:h-[300px] w-[225px] md:w-[300px]">
           <Image
             src="/cpc-white-logo.png"
             alt="Cadence Partners Logo"
