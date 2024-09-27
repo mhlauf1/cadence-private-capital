@@ -1,21 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { IoIosArrowRoundDown } from "react-icons/io";
+import { Image } from "@nextui-org/react";
 
 type AnimatedHeroProps = {
   title: string;
   bgImage: string;
   description: string;
-  teampage?: boolean;
 };
 
-const AnimatedHero = ({
-  title,
-  bgImage,
-  description,
-  teampage,
-}: AnimatedHeroProps) => {
+const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -23,23 +17,22 @@ const AnimatedHero = ({
   }, []);
 
   return (
-    <div
-      className={`${
-        teampage ? "h-[65vh]" : "h-[90vh]"
-      } py-16 text-white w-full relative overflow-hidden`}
-    >
-      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
-      <Image
-        src={bgImage}
-        alt={title}
-        fill
-        className="-z-20"
-        objectFit="cover"
-      />
-      <div className="h-full w-full px-4 md:px-20 flex flex-col items-center justify-between mt-auto">
+    <div className="relative w-screen h-[90vh] overflow-hidden">
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={bgImage}
+          alt={title}
+          classNames={{
+            wrapper: "w-[100vw] rounded-none h-full",
+            img: "object-cover rounded-none  w-[100vw] h-full",
+          }}
+        />
+      </div>
+      <div className="absolute inset-0 flex flex-col items-center justify-between px-4 md:px-20 py-16 z-20 text-white">
         <div></div>
         <div
-          className={`flex flex-col  items-center gap-6 md:gap-12 transition-opacity duration-1000 ${
+          className={`flex flex-col items-center gap-6 md:gap-12 transition-opacity duration-1000 ${
             mounted ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -47,10 +40,10 @@ const AnimatedHero = ({
             <Image
               src="/white-c-logo.png"
               alt="Host Image"
-              layout="responsive"
-              width={100}
-              height={100}
-              objectFit="cover"
+              classNames={{
+                wrapper: "w-full h-full",
+                img: "object-contain w-full h-full",
+              }}
             />
           </div>
           <h2 className="text-4xl md:text-5xl text-center tracking-tight font-semibold">
@@ -80,7 +73,7 @@ const AnimatedHero = ({
             </div>
           </div>
           <div
-            className={`w-full h-[1px] bg-white origin-left  transition-transform duration-[1700ms] ease ${
+            className={`w-full h-[1px] bg-white origin-left transition-transform duration-[1700ms] ease ${
               mounted ? "scale-x-100" : "scale-x-0"
             }`}
             style={{ transitionDelay: ".5s" }}

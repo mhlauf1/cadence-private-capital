@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 type AnimatedWrapperProps = {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ type AnimatedWrapperProps = {
   duration?: number;
   className?: string;
   animationType?: "fade-up" | "fade-in" | "slide-in-left" | "slide-in-right";
-  autoPlay?: boolean;
+  threshold?: number;
 };
 
 const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
@@ -16,24 +16,23 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   duration = 700,
   className = "",
   animationType = "fade-up",
-  autoPlay = false,
+  threshold = 0.1,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add("animate-in");
-          }, delay);
+          setIsVisible(true);
           observer.unobserve(entry.target);
         }
       },
       {
         root: null,
         rootMargin: "0px",
-        threshold: autoPlay ? 0.1 : 0,
+        threshold: threshold,
       }
     );
 
@@ -46,30 +45,37 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
         observer.unobserve(ref.current);
       }
     };
-  }, [delay]);
+  }, [threshold]);
 
   const getAnimationClasses = () => {
     switch (animationType) {
       case "fade-up":
-        return "opacity-0 translate-y-4";
+        return "translate-y-4";
       case "fade-in":
-        return "opacity-0";
+        return "";
       case "slide-in-left":
-        return "opacity-0 -translate-x-4";
+        return "-translate-x-full";
       case "slide-in-right":
-        return "opacity-0 translate-x-4";
+        return "translate-x-full";
       default:
-        return "opacity-0 translate-y-4";
+        return "translate-y-4";
     }
   };
 
   return (
     <div
       ref={ref}
-      className={`${className} ${getAnimationClasses()} transition-all ease-out`}
-      style={{ transitionDuration: `${duration}ms` }}
+      className={`${className} transition-all ease-out`}
+      style={{
+        transitionDuration: `${duration}ms`,
+        transitionDelay: `${delay}ms`,
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? "translate(0, 0)" : undefined,
+      }}
     >
-      {children}
+      <div className={!isVisible ? getAnimationClasses() : undefined}>
+        {children}
+      </div>
     </div>
   );
 };
