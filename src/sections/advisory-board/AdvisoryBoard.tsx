@@ -22,7 +22,7 @@ const BoardMemberCard = ({ imageUrl, name, bio, id }: BoardMemberProps) => (
           className="object-cover w-full h-auto  rounded-md"
         />
       </div>
-      <h3 className="text-xl font-semibold mt-4 md:mb-1">{name}</h3>
+      <h3 className="text-xl md:texl-2xl font-semibold mt-4 md:mb-1">{name}</h3>
 
       {/* Accordion for bio */}
       <Accordion>

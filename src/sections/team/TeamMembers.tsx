@@ -18,7 +18,7 @@ const Member = ({ imageUrl, name, bio }: MemberProps) => (
       alt={name}
       className="w-full h-auto  rounded-md"
     />
-    <h3 className="text-3xl font-semibold mt-6 mb-2">{name}</h3>
+    <h3 className="text-2xl md:text-3xl font-semibold mt-6 mb-2">{name}</h3>
     <p className=" text-neutral-500 mb-2">Partner</p>
 
     {/* Accordion for bio */}
@@ -33,7 +33,7 @@ const Member = ({ imageUrl, name, bio }: MemberProps) => (
 
 const TeamMembers = () => {
   return (
-    <section className="px-6 md:px-28 py-20 md:py-28">
+    <section className="px-4 md:px-28 py-20 md:py-28">
       <div className="flex flex-col gap-24 md:flex-row justify-center items-start">
         <div className="flex-1 w-full md:max-w-xl">
           <Member
