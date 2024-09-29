@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { IoIosArrowRoundDown } from "react-icons/io";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 type AnimatedHeroProps = {
   title: string;
@@ -12,8 +12,8 @@ type AnimatedHeroProps = {
 
 const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
   return (
-    <section className="h-[90vh] relative min-h-[600px] py-24 md:py-12 text-white w-full  overflow-hidden">
-      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/30 -z-10"></div>
+    <section className="h-[93vh] relative min-h-[600px] py-24 md:py-12 text-white w-full  overflow-hidden">
+      <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
       <Image
         src={bgImage}
         alt={title}
@@ -21,7 +21,6 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
         className="-z-20 w-screen h-full"
         objectFit="cover"
       />
-      {/* <AnimatePresence> */}
       <motion.div
         className="h-full w-full px-4 md:px-20 flex flex-col items-center justify-between mt-auto"
         initial={{ opacity: 0 }}
@@ -57,7 +56,12 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <p className="text-xl sm:text-2xl md:text-3xl">{description}</p>
+              <p
+                style={{ lineHeight: "135%" }}
+                className="text-xl sm:text-2xl md:text-3xl"
+              >
+                {description}
+              </p>
             </motion.div>
             <motion.div
               className="lg:flex-[3] hidden md:flex justify-end"
@@ -76,7 +80,6 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
           ></motion.div>
         </div>
       </motion.div>
-      {/* </AnimatePresence> */}
     </section>
   );
 };
