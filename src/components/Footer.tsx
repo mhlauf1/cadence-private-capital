@@ -6,13 +6,12 @@ const Footer = () => {
   return (
     <footer className="flex flex-col-reverse gap-y-6 md:flex-row items-center px-8 md:px-20 py-12 md:py-6">
       <div className="flex flex-row items-center  flex-grow flex-1  gap-1">
-        <p className="text-neutral-500 flex items-center  gap-1 text-sm text-center md:text-left">
-          <FaRegCopyright color="grey" size={10} />
-          Cadence Private Capital 2024. All rights reserved.
+        <p className="text-neutral-500  text-xs md:text-sm text-center md:text-left">
+          &copy; Cadence Private Capital 2024. All rights reserved.
         </p>
       </div>
 
-      <div className="flex-grow text-neutral-500 flex-1 text-sm text-center">
+      <div className="flex-grow text-neutral-500 flex-1 text-xs md:text-sm text-center">
         <a href="mailto:info@cadenceprivatecapital.com">
           info@cadenceprivatecapital.com
         </a>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 type AnimatedWrapperProps = {
@@ -20,12 +20,24 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   const controls = useAnimation();
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (isInView) {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust this breakpoint as needed
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isInView && !isMobile) {
       controls.start("visible");
     }
-  }, [isInView, controls]);
+  }, [isInView, controls, isMobile]);
 
   const variants = {
     hidden: {
@@ -49,6 +61,10 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
       },
     },
   };
+
+  if (isMobile) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div

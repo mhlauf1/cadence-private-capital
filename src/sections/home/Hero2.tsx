@@ -15,7 +15,7 @@ const Hero2 = () => {
         objectFit="cover"
       />
       <motion.div
-        className="flex py-36 md:py-24 px-4 md:px-20 md:justify-between h-full items-center md:items-start flex-col-reverse md:flex-col"
+        className="flex pb-36 pt-24 md:pb-24 md:pt-24 px-4 md:px-20 md:justify-between h-full items-center md:items-start flex-col-reverse md:flex-col"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeInOut", delay: 0.2 }}
