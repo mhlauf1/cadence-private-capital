@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero2 = () => {
   return (
-    <div className="h-[100vh] relative w-full overflow-hidden">
+    <div className="h-[95vh] md:h-[100vh] relative w-full overflow-hidden">
       <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/30 -z-10"></div>
       <Image
         src="/home-bg-main.png"

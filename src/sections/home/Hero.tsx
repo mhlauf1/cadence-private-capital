@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="h-[100vh] relative w-full overflow-hidden">
+    <div className="h-[95vh] md:h-[100vh] relative w-full overflow-hidden">
       <video
         src="/cpc-lake.mp4"
         autoPlay
