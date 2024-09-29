@@ -20,7 +20,7 @@ const Hero2 = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.75, ease: "easeInOut", delay: 0.2 }}
       >
-        <div className="mt-[15vh] md:mt-0">
+        <div className="mt-[12vh] md:mt-0">
           <h1
             style={{ lineHeight: "120%" }}
             className="text-2xl md:text-4xl lg:text-5xl w-full md:w-[60%] font-medium text-white mb-2"
