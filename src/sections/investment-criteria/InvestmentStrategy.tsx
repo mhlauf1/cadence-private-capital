@@ -52,6 +52,7 @@ const InvestmentStrategy = () => {
               layout="responsive"
               width={100}
               height={100}
+              className="rounded-md"
               objectFit="cover"
             />
           </div>
