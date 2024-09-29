@@ -14,7 +14,7 @@ const Item = ({ text, delay }: { text: string; delay?: number }) => (
 
 const InvestmentStrategy = () => {
   return (
-    <section className="px-8 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24  lg:pb-28 lg:pt-48">
+    <section className="px-4 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24  lg:pb-28 lg:pt-48">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-12">
         <div>
           <AnimatedWrapper delay={200}>

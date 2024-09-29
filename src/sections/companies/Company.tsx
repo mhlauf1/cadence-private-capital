@@ -15,7 +15,7 @@ const Company = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <section className="px-8 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24  lg:pb-28 lg:pt-36">
+    <section className="px-4 md:px-20 max-w-screen-2xl mx-auto pb-20 pt-24  lg:pb-28 lg:pt-36">
       <div className="flex items-center justify-center">
         <div className="px-10 py-6 rounded-lg duration-300 hover:bg-neutral-50">
           <div className="relative cursor-pointer  w-[250px] h-[80px] md:w-[400px] md:h-[125px]">

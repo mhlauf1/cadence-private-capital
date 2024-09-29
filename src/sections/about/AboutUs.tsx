@@ -2,7 +2,7 @@ import AnimatedWrapper from "@/components/AnimatedWrapper";
 
 const AboutUs = () => {
   return (
-    <section className="px-8 md:px-24 max-w-screen-2xl mx-auto pt-28 pb-16 md:pt-28 md:pb-24">
+    <section className="px-4 md:px-24 max-w-screen-2xl mx-auto pt-28 pb-16 md:pt-28 md:pb-24">
       <div className="flex flex-col">
         <AnimatedWrapper delay={200}>
           <span className="uppercase text-sm tracking-wide text-neutral-500">
