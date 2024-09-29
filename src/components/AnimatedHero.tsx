@@ -12,7 +12,7 @@ type AnimatedHeroProps = {
 
 const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
   return (
-    <section className="h-[93vh] relative min-h-[600px] py-24 md:py-12 text-white w-full  overflow-hidden">
+    <section className="h-[88vh] md:h-[93vh] relative min-h-[600px] py-24 md:py-12 text-white w-full  overflow-hidden">
       <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/40 -z-10"></div>
       <Image
         src={bgImage}
