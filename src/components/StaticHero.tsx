@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import AnimatedWrapper from "@/components/AnimatedWrapper";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 type StaticHeroProps = {
@@ -18,25 +19,28 @@ const StaticHero = ({ title, bgImage }: StaticHeroProps) => {
         className="-z-20"
         objectFit="cover"
       />
-      <div className="h-full px-4 md:px-20 flex flex-col items-center justify-center">
-        <AnimatedWrapper>
-          <div className="flex flex-col w-full items-center gap-6 md:gap-12">
-            <div className="h-[100px] md:h-[150px] w-[100px] md:w-[150px]">
-              <Image
-                src="/white-c-logo.png"
-                alt="Host Image"
-                layout="responsive"
-                width={100}
-                height={100}
-                objectFit="cover"
-              />
-            </div>
-            <h2 className="text-4xl md:text-5xl text-center font-semibold">
-              {title}
-            </h2>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.75, ease: "easeInOut", delay: 0.2 }}
+        className="h-full px-4 md:px-20 flex flex-col items-center justify-center"
+      >
+        <div className="flex flex-col w-full items-center gap-6 md:gap-12">
+          <div className="h-[100px] md:h-[150px] w-[100px] md:w-[150px]">
+            <Image
+              src="/white-c-logo.png"
+              alt="Host Image"
+              layout="responsive"
+              width={100}
+              height={100}
+              objectFit="cover"
+            />
           </div>
-        </AnimatedWrapper>
-      </div>
+          <h2 className="text-4xl md:text-5xl text-center font-semibold">
+            {title}
+          </h2>
+        </div>
+      </motion.div>
     </div>
   );
 };

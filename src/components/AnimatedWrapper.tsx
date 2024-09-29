@@ -8,6 +8,7 @@ type AnimatedWrapperProps = {
   duration?: number;
   className?: string;
   animationType?: "fade-up" | "fade-in" | "slide-in-left" | "slide-in-right";
+  subpage?: boolean;
 };
 
 const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
@@ -16,6 +17,7 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   duration = 0.7,
   className = "",
   animationType = "fade-up",
+  subpage = false,
 }) => {
   const controls = useAnimation();
   const ref = React.useRef(null);
@@ -34,7 +36,7 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   }, []);
 
   useEffect(() => {
-    if (isInView && !isMobile) {
+    if (isInView && isMobile) {
       controls.start("visible");
     }
   }, [isInView, controls, isMobile]);
