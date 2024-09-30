@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
       <div className="flex-grow flex-1 flex justify-end">
         <Image
-          src="/cpc-footer-logo.png"
+          src="/cpc-blue-logo.png"
           alt="Footer logo"
           className="w-[120px] h-[90px] md:w-[100px] md:h-[75px]"
           width={90}

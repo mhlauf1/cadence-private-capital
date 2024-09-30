@@ -1,9 +1,9 @@
-import Hero2 from "@/sections/home/Hero2";
+import Hero from "@/sections/home/Hero";
 
 export default function Home() {
   return (
     <main className="relative">
-      <Hero2 />
+      <Hero />
     </main>
   );
 }
