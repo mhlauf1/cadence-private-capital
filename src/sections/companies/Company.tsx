@@ -47,18 +47,18 @@ const Company = () => {
                   </p>
                   <p>
                     Embark&apos;s network currently consists of Rio Grooming
-                    School &amp; Salon and Barks &amp; Rec Hastings. Cadence
-                    Private Capital is actively seeking related add-ons for
-                    Embark.
+                    School & Salon, Barks & Rec Hastings, and Wags Stay N&apos;
+                    Play. Cadence Private Capital is actively seeking related
+                    add-ons for Embark.
                   </p>
                 </ModalBody>
                 <ModalFooter className="mt-8">
                   <Button color="default" variant="light" onPress={onClose}>
                     Close
                   </Button>
-                  <Button color="primary" onPress={onClose}>
+                  {/* <Button color="primary" onPress={onClose}>
                     Link to site?
-                  </Button>
+                  </Button> */}
                 </ModalFooter>
               </>
             )}
