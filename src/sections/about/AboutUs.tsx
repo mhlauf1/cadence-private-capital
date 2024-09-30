@@ -35,7 +35,7 @@ const AboutUs = () => {
               </p>
             </AnimatedWrapper>
             <AnimatedWrapper delay={400}>
-              <p className="leading-8 md:w-[90%] text-neutral-600">
+              <p className="leading-8 font-semibold md:w-[90%] text-neutral-600">
                 We strive to always deliver on our core values of Integrity,
                 Humility, Flexibility and Hard-Work.
               </p>

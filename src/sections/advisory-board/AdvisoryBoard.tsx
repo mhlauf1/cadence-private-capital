@@ -19,7 +19,7 @@ const BoardMemberCard = ({ imageUrl, name, bio, id }: BoardMemberProps) => (
           src={imageUrl}
           alt={name}
           fill
-          className="object-cover w-full h-auto  rounded-md"
+          className="object-cover object-top	 w-full h-auto  rounded-md"
         />
       </div>
       <h3 className="text-xl md:texl-2xl font-medium mt-4 md:mb-0">{name}</h3>

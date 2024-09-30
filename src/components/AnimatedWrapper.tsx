@@ -36,7 +36,7 @@ const AnimatedWrapper: React.FC<AnimatedWrapperProps> = ({
   }, []);
 
   useEffect(() => {
-    if (isInView && isMobile) {
+    if (isInView && !isMobile) {
       controls.start("visible");
     }
   }, [isInView, controls, isMobile]);

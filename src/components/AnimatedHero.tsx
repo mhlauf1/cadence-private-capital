@@ -69,7 +69,7 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 1.75 }}
             >
-              <IoIosArrowRoundDown size={42} />
+              <IoIosArrowRoundDown size={48} />
             </motion.div>
           </div>
           <motion.div
