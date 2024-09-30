@@ -51,7 +51,7 @@ const AreasOfFocus = () => {
           </h3>
         </AnimatedWrapper>
 
-        <section className="relative mt-12 md:mt-0 flex justify-center items-center md:h-[40vh] md:w-[50vw] mx-auto md:bg-blue-50">
+        <section className="relative mt-12 md:mt-0 flex justify-center items-center md:h-[450px] md:w-[50vw] mx-auto md:bg-blue-50">
           <div className="flex flex-col lg:flex-row gap-12">
             {cardData.map((item) => (
               <div key={item.id}>

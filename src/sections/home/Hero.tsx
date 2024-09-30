@@ -28,14 +28,13 @@ const Hero = () => {
             Private Equity Partners for the Lower Middle Market
           </h1>
         </div>
-        <div className="h-[225px] md:h-[300px] w-[225px] md:w-[300px]">
+        <div className="w-[175px] relative h-[175px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px]">
           <Image
             src="/cpc-white-logo.png"
             alt="Cadence Partners Logo"
-            layout="responsive"
-            width={100}
-            height={100}
-            objectFit="cover"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 150px, (max-width: 1024px) 200px, 250px"
           />
         </div>
       </motion.div>
