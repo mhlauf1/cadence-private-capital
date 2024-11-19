@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col-reverse gap-y-6 md:flex-row items-center px-8 md:px-20 py-12 md:py-6">
+    <footer className="flex flex-col-reverse gap-y-6 md:flex-row items-center px-8 md:px-20 py-10 md:py-6">
       <div className="flex flex-col items-center md:items-start gap-1 flex-1">
         <p className="text-neutral-500  text-xs  text-center md:text-left">
           &copy; Cadence Private Capital 2024. All rights reserved.
