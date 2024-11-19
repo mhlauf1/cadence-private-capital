@@ -10,7 +10,7 @@ const Footer = () => {
         </p>
         <p className="text-neutral-500  text-xs  text-center md:text-left">
           Designed and developed by{" "}
-          <a href="www.lauf.co" target="_blank" className="font-medium">
+          <a href="https://www.lauf.co" target="_blank" className="font-medium">
             Lauf.
           </a>
         </p>
