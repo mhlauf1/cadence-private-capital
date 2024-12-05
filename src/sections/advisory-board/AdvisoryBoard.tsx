@@ -61,7 +61,7 @@ const advisoryBoardData = [
   },
   {
     id: 4,
-    name: "Brian Wanger",
+    name: "Brian Wenger",
     imageUrl: "/board-brian-2.png",
     bio: "Brian Wenger is the founder and CEO of Radius Living, Rx, a multi-state provider of long-term pharmacy services. Prior to founding Radius, Brian had a successful law career, spending over 26 years with Briggs and Morgan, P.A. (now Taft, Stettinius, & Hollister LLP), one of the largest law firms in the country. During his time with Briggs and Morgan, he was Chair of Firm from 2011 – 2014, and specialized in corporate and transactional work, estate planning, and professional sports team advisory – Mr. Wenger was lead counsel for many high-net-worth families and professional sports teams owned by those families.  Brian also has considerable public company experience, having served as General Counsel and Secretary for PepsiAmericas, Inc. and Executive Vice President and Chief Legal Officer of Optum, Inc. (the healthcare services subsidiary of UnitedHealth Group). Mr. Wenger is incredibly active in the community and has sat on the board of multiple local and international organizations, including the University of St. Thomas, the University of Minnesota Foundation, the Jeremiah Program, Catholic Relief Services, and the Catholic Schools Center for Excellence, amongst others. Brian has a B.A. in Economics from Marquette University and a J.D. from Villanova University Charles Widger School of Law, where he was a member of the law review. Brian and his wife Kate live in Saint Paul, Minnesota and have six children.",
   },
