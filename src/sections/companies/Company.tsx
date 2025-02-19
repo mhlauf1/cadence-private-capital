@@ -10,6 +10,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import Link from "next/link";
 
 const Company = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -53,6 +54,15 @@ const Company = () => {
                   </p>
                 </ModalBody>
                 <ModalFooter className="mt-8">
+                  <Link
+                    target="_blank"
+                    href="https://www.embarkpetservices.com/"
+                  >
+                    <Button color="primary" onPress={onClose}>
+                      View Website
+                    </Button>
+                  </Link>
+
                   <Button color="default" variant="light" onPress={onClose}>
                     Close
                   </Button>
