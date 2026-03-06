@@ -6,9 +6,8 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-} from "@nextui-org/react";
+} from "@nextui-org/navbar";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,10 +35,9 @@ export default function Nav() {
                 <Image
                   src="/cadence-nav-logo.png"
                   alt="Cadence Logo"
-                  layout="responsive"
-                  width={100}
-                  height={100}
-                  objectFit="cover"
+                  width={170}
+                  height={170}
+                  className="w-full h-auto"
                 />
               </div>
             </Link>
@@ -71,18 +69,16 @@ export default function Nav() {
             className="hidden md:flex text-neutral-500 gap-10"
             justify="end"
           >
-            {navItems.map((item, index) => (
-              <div key={item.name}>
-                <NavbarItem>
-                  <Link
-                    color="foreground"
-                    className="hover:text-black transition"
-                    href={item.href}
-                  >
-                    {item.name}
-                  </Link>
-                </NavbarItem>
-              </div>
+            {navItems.map((item) => (
+              <NavbarItem key={item.name}>
+                <Link
+                  color="foreground"
+                  className="hover:text-black transition"
+                  href={item.href}
+                >
+                  {item.name}
+                </Link>
+              </NavbarItem>
             ))}
           </NavbarContent>
         </div>
@@ -90,21 +86,10 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden sticky inset-0 bg-white z-40 h-screen"
-        >
+        <div className="md:hidden sticky inset-0 bg-white z-40 h-screen animate-in">
           <ul className="flex flex-col items-start mt-[10vh] bg-neutral-50 rounded-xl h-full pt-[12vh] mx-2 px-6 py-12 text-neutral-900 text-lg space-y-6">
             {navItems.map((item) => (
-              <motion.li
-                key={item.name}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-              >
+              <li key={item.name} className="animate-in">
                 <Link
                   className="hover:text-neutral-500 transition"
                   onClick={toggleMenu}
@@ -112,10 +97,10 @@ export default function Nav() {
                 >
                   {item.name}
                 </Link>
-              </motion.li>
+              </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       )}
     </div>
   );

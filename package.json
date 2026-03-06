@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/accordion": "^2.2.7",
+    "@nextui-org/button": "^2.2.9",
+    "@nextui-org/link": "^2.2.7",
+    "@nextui-org/modal": "^2.2.7",
+    "@nextui-org/navbar": "^2.2.8",
     "@nextui-org/react": "^2.4.6",
     "@nextui-org/system": "^2.2.5",
     "@nextui-org/theme": "^2.2.9",
+    "@nextui-org/use-disclosure": "^2.2.2",
     "framer-motion": "^11.4.0",
     "next": "14.2.7",
     "react": "^18",

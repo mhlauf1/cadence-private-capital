@@ -8,7 +8,7 @@ const InvestmentCriteriaPage = () => {
     <main className="relavtive">
       <AnimatedHero
         title="Cadence Investment Criteria"
-        bgImage="/investment-bg.jpg"
+        bgImage="/investment-bg.webp"
         description="Cadence provides flexible capital to founders and management teams who lead profitable businesses"
       />
       <InvestmentStrategy />

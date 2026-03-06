@@ -18,8 +18,7 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
         src={bgImage}
         alt={title}
         fill
-        className="-z-20 w-screen h-full"
-        objectFit="cover"
+        className="-z-20 w-screen h-full object-cover"
       />
       <motion.div
         className="h-full w-full px-4 md:px-20 flex flex-col items-center justify-between mt-auto"
@@ -38,10 +37,9 @@ const AnimatedHero = ({ title, bgImage, description }: AnimatedHeroProps) => {
             <Image
               src="/white-c-logo.png"
               alt="Host Image"
-              layout="responsive"
               width={100}
               height={100}
-              objectFit="cover"
+              className="w-full h-auto"
             />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-semibold">

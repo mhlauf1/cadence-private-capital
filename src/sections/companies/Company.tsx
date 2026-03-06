@@ -7,9 +7,9 @@ import {
   ModalHeader,
   ModalBody,
   ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
+} from "@nextui-org/modal";
+import { Button } from "@nextui-org/button";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 import Link from "next/link";
 
 type CompanyKey = "embark" | "sightline" | null;

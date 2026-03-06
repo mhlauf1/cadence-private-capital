@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Accordion, AccordionItem } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import Image from "next/image";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 
@@ -38,7 +38,7 @@ const advisoryBoardData = [
   {
     id: 0,
     name: "Chris Metz",
-    imageUrl: "/board-chris.jpg",
+    imageUrl: "/board-chris.webp",
     bio: "Chris Metz is a CEO with a proven track record of success leading consumer and durable goods companies for over 25 years. In January 2024, Mr. Metz became President and CEO of Solo Brands (NYSE:DTC), an omnichannel lifestyle-brand company with beloved consumer brands such as Solo Stove, Chubbies, and Isle. Previously, he was CEO of Vista Outdoor (NYSE:VSTO), a global leader in outdoor products with brands such as Camelbak, Fox Racing, Simms Fishing, and Federal / Remington ammunition. While at Vista, Chris oversaw industry-leading stock price, revenue, and EBITDA growth. Mr. Metz has led dozens of M&A transactions and positioned some of the US’ most iconic companies for success. Chris is also an experienced Independent Director, currently sitting on the board of Central Garden & Pet (NYSE:CENT) and previously on the board of Acushnet (NYSE:GOLF), the parent company of Titleist. He graduated from the University of Delaware and received an MBA from UNC-Chapel Hill. Chris has twin boys attending SMU, and he currently lives in Florida with his wife.",
   },
   {
@@ -68,7 +68,7 @@ const advisoryBoardData = [
   {
     id: 5,
     name: "Jason Mansur",
-    imageUrl: "/board-jason.png",
+    imageUrl: "/board-jason.webp",
     bio: "Jason Mansur is a founder and experienced leader with a passion for driving value through relationships, dynamic solutions and extension knowledge of business operations. Mr. Mansur is currently the founder of Navix, a fintech SaaS solution for supply chain organizations. Navix has successfully grown from personal boot-strapping to a Seed Series and recently completed their Series A raise. In addition, he is the VP of Enterprise Partnerships at Valley Companies, a leading logistics provider driving value through enterprise and niche solutions. His role encompasses c-suite development, new client engagement, and vendor partnerships to drive value for all parties. Previously, Mr. Mansur was the President & Owner of Evans Transportation Services, one of the fastest growing managed transportation logistics providers in the US. As President, Jason had full responsibility for driving growth and professional development of the organization. During his tenure, Evans experienced growth from $65M to $400M, developed a path for significant shareholder return, restructured financial institution relationship, and quietly went from one of the lowest-ranked workplaces in the region to winning awards as one of the top workplaces in the region and the industry. Mr. Mansur graduated from the University of Saint Thomas. Jason and his wife Alicia have two children, Ava and Miles, and reside in St. Paul, MN.",
   },
   {

@@ -5,7 +5,7 @@ import TeamMembers from "@/sections/team/TeamMembers";
 const TeamPage = () => {
   return (
     <main className="relative">
-      <StaticHero bgImage="/team-bg-min.png" title="Meet Cadence" />
+      <StaticHero bgImage="/team-bg-min.webp" title="Meet Cadence" />
       <TeamMembers />
     </main>
   );

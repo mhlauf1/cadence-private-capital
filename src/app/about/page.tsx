@@ -9,7 +9,7 @@ const AboutPage = () => {
       <div>
         <AnimatedHero
           title="About Cadence"
-          bgImage="/about-bg.png"
+          bgImage="/about-bg.webp"
           description="Cadence Private Capital invests in lower middle market companies on behalf of our anchor investors and other partners"
         />
       </div>

@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { Accordion, AccordionItem, Link } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Link } from "@nextui-org/link";
 import AnimatedWrapper from "@/components/AnimatedWrapper";
 type MemberProps = {
   imageUrl: string;
@@ -37,14 +38,14 @@ const TeamMembers = () => {
       <div className="flex flex-col gap-24 md:flex-row justify-center items-start">
         <div className="flex-1 w-full md:max-w-xl">
           <Member
-            imageUrl="/peter-img.png"
+            imageUrl="/peter-img.webp"
             name="Peter Mark"
             bio="Peter has diversified experience across the investment life-cycle - including M&A, integration, and operations leadership gained in a variety of roles at Vista Outdoor. He maintains strong expertise in analyzing, executing, and operating investments, with an emphasis on post-acquisition operations and scaling. A Minneapolis native, Peter now lives in St. Louis Park, Minnesota. Peter graduated from the University of Notre Dame (B.A. Economics, Mandarin) where he was a walk-on to the Varsity hockey team."
           />
         </div>
         <div className="flex-1 w-full md:max-w-xl">
           <Member
-            imageUrl="/jack-img.png"
+            imageUrl="/jack-img.webp"
             name="Jack Brady"
             bio="Jack has a strong M&A background gained through his experience in private equity at Stone Arch Capital and investment banking at Harris Williams. He possesses a skillset for sourcing and analyzing new investment opportunities, leading due diligence efforts on prospective investments, and working with portfolio companies on strategic initiatives and add-on acquisitions. A St. Paul, Minnesota native, Jack now lives in the North Loop of Minneapolis. Jack graduated from the University of Minnesota (B.S.B. in Finance)."
           />

@@ -7,7 +7,7 @@ const AreasOfFocusPage = () => {
     <main>
       <AnimatedHero
         title="Cadence Areas of Focus"
-        bgImage="/minneapolis-2-min.png"
+        bgImage="/minneapolis-2-min.webp"
         description="Cadence targets opportunities in growing industries with attractive tailwinds"
       />
       <AreasOfFocus />

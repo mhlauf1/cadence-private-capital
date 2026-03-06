@@ -5,7 +5,7 @@ import Company from "@/sections/companies/Company";
 const CompaniesPage = () => {
   return (
     <main>
-      <StaticHero bgImage="/companies-bg-min.png" title="Cadence Investments" />
+      <StaticHero bgImage="/companies-bg-min.webp" title="Cadence Investments" />
       <Company />
     </main>
   );

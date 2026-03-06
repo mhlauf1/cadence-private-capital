@@ -29,9 +29,9 @@ const Footer = () => {
         <Image
           src="/cpc-blue-logo.png"
           alt="Footer logo"
-          className="w-[120px] h-[90px] md:w-[90px] md:h-[70px]"
-          width={90}
-          height={70}
+          className="w-[120px] h-auto md:w-[90px]"
+          width={261}
+          height={181}
         />
       </div>
     </footer>

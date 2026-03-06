@@ -16,8 +16,7 @@ const StaticHero = ({ title, bgImage }: StaticHeroProps) => {
         src={bgImage}
         alt={title}
         fill
-        className="-z-20"
-        objectFit="cover"
+        className="-z-20 object-cover"
       />
       <motion.div
         initial={{ opacity: 0 }}
@@ -30,10 +29,9 @@ const StaticHero = ({ title, bgImage }: StaticHeroProps) => {
             <Image
               src="/white-c-logo.png"
               alt="Host Image"
-              layout="responsive"
               width={100}
               height={100}
-              objectFit="cover"
+              className="w-full h-auto"
             />
           </div>
           <h2 className="text-4xl md:text-5xl text-center font-semibold">
