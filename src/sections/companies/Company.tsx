@@ -110,11 +110,11 @@ const Company = () => {
                     </p>
                     <p>
                       Embark&apos;s network currently consists of Rio Grooming
-                      School &amp; Salon, Barks &amp; Rec Hastings, Wags Stay
+                      School &amp; Salon, Riverside Pet Resort, Wags Stay
                       N&apos; Play, Boxers Bed &amp; Biscuits, Hound Around
-                      Resort, Kingdom Canine, Canine Country Club, and Home Away
-                      From Home. Cadence Private Capital is actively seeking
-                      related add-ons for Embark.
+                      Resort, Kingdom Canine, Canine Country Club, Home Away
+                      From Home, and Happy Tails Lodge. Cadence Private Capital
+                      is actively seeking related add-ons for Embark.
                     </p>
                   </>
                 )}
